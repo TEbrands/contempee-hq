@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    background-color: #F7F4F2;
+    color: #3d3530;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+@layer components {
+  /* Sidebar nav item */
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-body text-[#3d3530] transition-colors duration-150 cursor-pointer;
+  }
+  .nav-item:hover {
+    @apply bg-brand-sand;
+  }
+  .nav-item.active {
+    @apply bg-brand-sand font-medium;
+  }
+
+  /* Section tab button */
+  .tab-btn {
+    @apply px-4 py-2 text-sm font-body border-b-2 border-transparent text-[#7a6f65] transition-colors duration-150 cursor-pointer whitespace-nowrap;
+  }
+  .tab-btn:hover {
+    @apply text-[#3d3530] border-brand-taupe;
+  }
+  .tab-btn.active {
+    @apply text-[#3d3530] border-[#3d3530] font-medium;
+  }
+
+  /* Dashboard card */
+  .card {
+    @apply bg-white rounded-xl border border-brand-sand p-6 shadow-sm;
+  }
+
+  /* Metric tile */
+  .metric-tile {
+    @apply card flex flex-col gap-1;
+  }
+  .metric-tile .metric-label {
+    @apply text-xs font-body uppercase tracking-widest text-brand-taupe;
+  }
+  .metric-tile .metric-value {
+    @apply text-3xl font-heading font-light text-[#3d3530];
+  }
+  .metric-tile .metric-delta {
+    @apply text-xs font-body text-brand-taupe;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply text-2xl font-heading font-light text-[#3d3530] tracking-wide;
+  }
+
+  /* Placeholder block */
+  .placeholder-block {
+    @apply rounded-lg bg-brand-linen border border-brand-sand flex items-center justify-center text-brand-taupe text-sm font-body;
+  }
+}

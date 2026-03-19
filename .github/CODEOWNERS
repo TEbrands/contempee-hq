@@ -1,0 +1,21 @@
+# CODEOWNERS — Contempee HQ
+# ──────────────────────────────────────────────────────────────────────────────
+# This file defines who must review pull requests that modify specific files.
+# Rules are matched from bottom to top — the last matching rule takes precedence.
+#
+# Syntax: <path pattern>  <@owner or team>
+#
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Default owner for everything ─────────────────────────────────────────────
+# All files require review from TEbrands unless a more specific rule below
+# overrides it.
+*  @TEbrands
+
+# ── Operations section — owned by Mscontempee26 ───────────────────────────────
+# Any PR that touches files inside src/components/operations/ must be reviewed
+# and approved by @Mscontempee26 before it can be merged.
+# @Mscontempee26 can view the full repository but may only open PRs that modify
+# files within this folder without requiring additional approval from @TEbrands.
+/src/components/operations/  @Mscontempee26
